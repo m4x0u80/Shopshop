@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+	Ajouter un Avis
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-10">
+				<h1 class="text-center">
+					Ajouter un Avis</h1>
+						{% for avis in aviss %}
+							<option value="{{avis.commentaires_avis}}">{{avis.id_avis}}</option>
+						{% endfor %}
+					</select>
+				<form action="" method="post">
+					<div class="text-center">
+					<input type="text" id="commentaire" name="commentaire" class="form-control" placeholder="commentaire" required>
+						<input type="submit" value="Ajouter l'avis" class="btn btn-primary m-2">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+
+
+

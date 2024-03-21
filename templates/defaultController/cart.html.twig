@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+	Panier
+{% endblock %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-10">
+				<h1 class="text-center">Panier</h1>
+                {% for cart in carts %}
+					{{ cart.id }}
+					{{ cart.creationdate }}
+					{{ cart.status }}
+					{{ cart.id_user }}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endblock %}

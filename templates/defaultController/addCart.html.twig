@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    {{ parent() }}
+    Ajouter un Panier
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 align-items-center">
+                <h1 class="text-center text-primary fw-bold m-2">Ajouter un Panier</h1>
+                <form action="" method="post">
+                    <select id="id_user" name="id_user" class="form-select" required>
+                        {% for user in users %}
+                            <option  value="{{ user.id }}">{{ user.email }}</option>
+                        {% endfor %}
+                    </select>
+                    <div class="text-center">
+                        <input type="submit" value="Ajouter" class="btn btn-primary m-2">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
